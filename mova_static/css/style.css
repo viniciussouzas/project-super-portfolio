@@ -1,0 +1,141 @@
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #F6FAFC;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    height: 100%;
+}
+
+.profile-infos-container {
+    align-items: center;
+    background-color: #001A3B;
+    display: flex;
+    color: #fff;
+    justify-content: space-around;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.profile-infos {
+    font-size: 18px;
+}
+
+.profile-infos-image {
+    width: 40px;
+}
+
+.main-container {
+    /* background-color: rgb(128, 153, 111); */
+    display: flex;
+    padding: 20px;
+}
+
+.certificates-container, .bio-container {
+    align-items: center;
+    display: flex;
+    background-color: #F6FAFC;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    color: #001A3B;
+    flex-direction: column;
+    height: fit-content;
+    padding: 20px;
+    text-align: center;
+    width: 30%;
+}
+
+.section-title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.certificates-institution {
+    background-color: #aac4e465;
+    color: #001A3B;
+    cursor: default;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    width: fit-content;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    width: 90%;
+}
+
+.project-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding: 20px;
+}
+
+.project-title {
+    color: #001A3B;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.project-description, .project-github-url, .project-keyword {
+    font-size: 16px;
+    margin-bottom: 10px;
+    cursor: default;
+}
+
+.project-github-url {
+    background-color: #0055B7;
+    border-radius: 8px;
+    margin-top: 10px;
+    padding: 10px;
+    width: fit-content;
+}
+
+.project-github-url:hover {
+    background-color: #AAC4E4;
+    color: #001A3B;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.project-key-skill {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+    cursor: default;
+}
+
+.bio-container {
+    width: 40%;
+}
+
+#profile-bio {
+    color: #000a18;
+}

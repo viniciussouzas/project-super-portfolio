@@ -1,0 +1,94 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ['super_portfolio']
+
+[project]
+name = "super-portfolio"
+version = "0.1.0"
+description = ""
+readme = "readme.md"
+requires-python = ">=3.10"
+dependencies = [
+    "Django==4.2.3",
+    "django-extensions==3.2.3",
+    "django-filter==23.2",
+    "django-mysql==4.11.0",
+    "djangorestframework==3.14.0",
+    "djangorestframework-simplejwt==5.3.0",
+    "Markdown==3.4.4",
+    "markdown-it-py==2.2.0",
+    "mysqlclient==2.2.0",
+    "Pillow==10.0.0",
+    "whitenoise==6.5.0",
+]
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "super_portfolio.settings"
+python_files = ["tests/test_*.py", "tests/*_test.py"]
+minversion = "7.3"
+addopts = "-vv -s --continue-on-collection-errors --reuse-db"
+testpaths = ["tests"]
+accept_xfail = true
+filterwarnings = [
+    "ignore::pytest.PytestDeprecationWarning",
+    "ignore::DeprecationWarning",
+]
+
+
+[tool.black]
+line-length = 79
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+
+[tool.isort]
+profile = "black"
+line_length = 79
+
+[project.optional-dependencies]
+test = [
+    "pytest-dependency@git+https://github.com/betrybe/pytest-dependency@984f9d7d083870d091e8862a9b9c33fdf815b8d9",
+    "faker==18.9.0",
+    "pytest==7.3.1",
+    "pytest-cov==4.1.0",
+    "pytest-json==0.4.0",
+    "pytest-django==4.5.2",
+    "beautifulsoup4==4.12.2",
+]
+alltest = [
+    "super-portfolio[test]",
+    "coverage==7.2.6",
+    "iniconfig==2.0.0",
+    "packaging==23.1",
+    "pluggy==1.0.0",
+]
+dev = [
+    "super-portfolio[test]",
+    "black==23.3.0",
+    "flake8==6.0.0",
+    "isort==5.12.0",
+]
+alldev = [
+    "super-portfolio[dev]",
+    "super-portfolio[alltest]",
+    "click==8.1.3",
+    "mccabe==0.7.0",
+    "pathspec==0.11.1",
+    "platformdirs==3.5.1",
+    "pycodestyle==2.10.0",
+    "pyflakes==3.0.1",
+]
