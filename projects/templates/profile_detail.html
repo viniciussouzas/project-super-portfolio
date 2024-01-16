@@ -7,6 +7,13 @@
     <p>{{ profile.github }}</p>
     <p>{{ profile.linkedin }}</p>
     <p>{{ profile.bio }}</p>
+    {% for certificate in profile.certificates.all %}
+        <h2>{{ certificate.name }}</h2>
+        <p>{{ certificate.description }}</p>
+        <p>{{ certificate.url }}</p>
+        <p>{{ certificate.certifying_institution }}</p>
+    {% endfor %}
+
     {% for project in profile.projects.all %}
         <h2>{{ project.name }}</h2>
         <p>{{ project.description }}</p>
