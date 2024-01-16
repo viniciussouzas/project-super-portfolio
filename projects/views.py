@@ -9,7 +9,7 @@ class ProfileViewSet(viewsets.ModelViewSet):
     queryset = Profile.objects.all()
     serializer_class = ProfileSerializer
 
-    def get_permission(self):
+    def get_permissions(self):
         if self.request.method == "GET":
             return [AllowAny()]
         else:
